@@ -8,15 +8,14 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
-    var window: UIWindow?
-
+    var appCoordinator: AppCoordinator?
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = ViewController()
-            window.rootViewController?.view.backgroundColor = .red
-            self.window = window
+            let appCoordinator = AppCoordinator(window: window)
+            appCoordinator.start()
+            self.appCoordinator = appCoordinator
             window.makeKeyAndVisible()
         }
     }
