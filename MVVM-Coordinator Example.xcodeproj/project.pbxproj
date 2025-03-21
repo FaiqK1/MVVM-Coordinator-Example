@@ -16,6 +16,13 @@
 		A83956982D8D0B5000FE9C38 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83956972D8D0B5000FE9C38 /* AppCoordinator.swift */; };
 		A839569B2D8D0E0D00FE9C38 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839569A2D8D0E0D00FE9C38 /* OnboardingCoordinator.swift */; };
 		A839569D2D8D0E3E00FE9C38 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839569C2D8D0E3E00FE9C38 /* OnboardingView.swift */; };
+		A83956A12D8D176400FE9C38 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83956A02D8D176400FE9C38 /* MainCoordinator.swift */; };
+		A83956A42D8D199F00FE9C38 /* MainFirstTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83956A32D8D199F00FE9C38 /* MainFirstTabCoordinator.swift */; };
+		A83956A62D8D19A800FE9C38 /* MainSecondTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83956A52D8D19A800FE9C38 /* MainSecondTabCoordinator.swift */; };
+		A83956AD2D8D1B5300FE9C38 /* MainFirstDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83956AC2D8D1B5300FE9C38 /* MainFirstDetailView.swift */; };
+		A83956B32D8D1CE300FE9C38 /* MainFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83956B22D8D1CE300FE9C38 /* MainFirstViewController.swift */; };
+		A83956B62D8D206900FE9C38 /* MainSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83956B42D8D206900FE9C38 /* MainSecondViewController.swift */; };
+		A83956B72D8D206900FE9C38 /* MainSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A83956B52D8D206900FE9C38 /* MainSecondViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +37,13 @@
 		A83956972D8D0B5000FE9C38 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		A839569A2D8D0E0D00FE9C38 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		A839569C2D8D0E3E00FE9C38 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A83956A02D8D176400FE9C38 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		A83956A32D8D199F00FE9C38 /* MainFirstTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFirstTabCoordinator.swift; sourceTree = "<group>"; };
+		A83956A52D8D19A800FE9C38 /* MainSecondTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSecondTabCoordinator.swift; sourceTree = "<group>"; };
+		A83956AC2D8D1B5300FE9C38 /* MainFirstDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFirstDetailView.swift; sourceTree = "<group>"; };
+		A83956B22D8D1CE300FE9C38 /* MainFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFirstViewController.swift; sourceTree = "<group>"; };
+		A83956B42D8D206900FE9C38 /* MainSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSecondViewController.swift; sourceTree = "<group>"; };
+		A83956B52D8D206900FE9C38 /* MainSecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainSecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +102,7 @@
 			children = (
 				A83956972D8D0B5000FE9C38 /* AppCoordinator.swift */,
 				A839569A2D8D0E0D00FE9C38 /* OnboardingCoordinator.swift */,
+				A83956A22D8D197100FE9C38 /* Main */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -104,8 +119,46 @@
 			isa = PBXGroup;
 			children = (
 				A839569E2D8D13EF00FE9C38 /* Onboarding */,
+				A83956AB2D8D1AFF00FE9C38 /* Main */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A83956A22D8D197100FE9C38 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A83956A02D8D176400FE9C38 /* MainCoordinator.swift */,
+				A83956A32D8D199F00FE9C38 /* MainFirstTabCoordinator.swift */,
+				A83956A52D8D19A800FE9C38 /* MainSecondTabCoordinator.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A83956AB2D8D1AFF00FE9C38 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A83956AF2D8D1B7D00FE9C38 /* FirstTab */,
+				A83956AE2D8D1B7300FE9C38 /* SecondTab */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A83956AE2D8D1B7300FE9C38 /* SecondTab */ = {
+			isa = PBXGroup;
+			children = (
+				A83956B42D8D206900FE9C38 /* MainSecondViewController.swift */,
+				A83956B52D8D206900FE9C38 /* MainSecondViewController.xib */,
+			);
+			path = SecondTab;
+			sourceTree = "<group>";
+		};
+		A83956AF2D8D1B7D00FE9C38 /* FirstTab */ = {
+			isa = PBXGroup;
+			children = (
+				A83956B22D8D1CE300FE9C38 /* MainFirstViewController.swift */,
+				A83956AC2D8D1B5300FE9C38 /* MainFirstDetailView.swift */,
+			);
+			path = FirstTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +221,7 @@
 			files = (
 				A839568D2D8CFB1F00FE9C38 /* LaunchScreen.storyboard in Resources */,
 				A839568A2D8CFB1F00FE9C38 /* Assets.xcassets in Resources */,
+				A83956B72D8D206900FE9C38 /* MainSecondViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,12 +233,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A83956952D8D0A9300FE9C38 /* Coordinator.swift in Sources */,
+				A83956A12D8D176400FE9C38 /* MainCoordinator.swift in Sources */,
 				A839569B2D8D0E0D00FE9C38 /* OnboardingCoordinator.swift in Sources */,
 				A83956852D8CFB1E00FE9C38 /* ViewController.swift in Sources */,
+				A83956B32D8D1CE300FE9C38 /* MainFirstViewController.swift in Sources */,
+				A83956A42D8D199F00FE9C38 /* MainFirstTabCoordinator.swift in Sources */,
+				A83956B62D8D206900FE9C38 /* MainSecondViewController.swift in Sources */,
+				A83956A62D8D19A800FE9C38 /* MainSecondTabCoordinator.swift in Sources */,
 				A83956982D8D0B5000FE9C38 /* AppCoordinator.swift in Sources */,
 				A83956812D8CFB1E00FE9C38 /* AppDelegate.swift in Sources */,
 				A83956832D8CFB1E00FE9C38 /* SceneDelegate.swift in Sources */,
 				A839569D2D8D0E3E00FE9C38 /* OnboardingView.swift in Sources */,
+				A83956AD2D8D1B5300FE9C38 /* MainFirstDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

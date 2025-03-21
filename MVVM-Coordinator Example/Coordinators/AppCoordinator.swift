@@ -17,10 +17,14 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        let onboardingCoordinator = OnboardingCoordinator()
-        onboardingCoordinator.start()
+//        let onboardingCoordinator = OnboardingCoordinator()
+//        onboardingCoordinator.start()
+//        childCoordinators = [onboardingCoordinator]
+//        window.rootViewController = onboardingCoordinator.rootViewController
         
-        childCoordinators = [onboardingCoordinator]
-        window.rootViewController = onboardingCoordinator.rootViewController
+        let mainCoordinator = MainCoordinator()
+        mainCoordinator.start()
+        childCoordinators = [mainCoordinator]
+        window.rootViewController = mainCoordinator.rootViewController
     }
 }
