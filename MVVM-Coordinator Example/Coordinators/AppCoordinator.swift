@@ -31,8 +31,8 @@ class AppCoordinator: Coordinator {
                 }
                 let coordinator = createChildCoordinator(for: hasSeen)
                 coordinator.start()
-                self.childCoordinators = [coordinator]
-                self.window.rootViewController = coordinator.getRootViewController()
+                childCoordinators = [coordinator]
+                window.rootViewController = coordinator.getRootViewController()
             }
             .store(in: &subscriptions)
     }
