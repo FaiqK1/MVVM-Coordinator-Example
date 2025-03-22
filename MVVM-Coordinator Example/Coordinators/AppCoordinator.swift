@@ -22,7 +22,7 @@ class AppCoordinator: Coordinator {
     func start() {
         hasSeenOnboarding.sink { [weak self] hasSeen in
             guard let self = self else { return }
-            let coordinator = self.createCoordinator(for: hasSeen)
+            let coordinator = createCoordinator(for: hasSeen)
             coordinator.start()
             self.childCoordinators = [coordinator]
             self.window.rootViewController = coordinator.getRootViewController()
