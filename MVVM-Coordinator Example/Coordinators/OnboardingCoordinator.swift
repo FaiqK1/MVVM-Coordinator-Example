@@ -6,14 +6,24 @@
 //
 
 import SwiftUI
+import Combine
 
 class OnboardingCoordinator: Coordinator {
     var rootViewController = UIViewController()
+    var hasSeenOnboarding: CurrentValueSubject<Bool, Never>
+    
+    init(_ hasSeenOnboarding: CurrentValueSubject<Bool, Never>) {
+        self.hasSeenOnboarding = hasSeenOnboarding
+    }
     
     func start() {
         let onboardingView = OnboardingView {
             
         }
         rootViewController = UIHostingController(rootView: onboardingView)
+    }
+    
+    func getRootViewController() -> UIViewController {
+        return rootViewController
     }
 }

@@ -36,4 +36,8 @@ class MainCoordinator: Coordinator {
             secondViewController
         ]
     }
+    
+    func getRootViewController() -> UIViewController {
+        return rootViewController
+    }
 }

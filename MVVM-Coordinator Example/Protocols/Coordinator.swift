@@ -5,9 +5,15 @@
 //  Created by Faiq Khan on 21/03/2025.
 //
 
-import Foundation
+import UIKit
 
-/// All sub coordinators will conform to following
 protocol Coordinator {
     func start()
+    func getRootViewController() -> UIViewController
+}
+
+extension Coordinator {
+    func getRootViewController() -> UIViewController {
+        return UIViewController()
+    }
 }
