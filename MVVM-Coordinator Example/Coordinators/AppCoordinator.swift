@@ -10,10 +10,10 @@ import SwiftUI
 import Combine
 
 class AppCoordinator: Coordinator {
-    var window: UIWindow
-    var childCoordinators = [Coordinator]()
-    var hasSeenOnboarding = CurrentValueSubject<Bool, Never>(false)
-    var subscriptions = Set<AnyCancellable>()
+    private var window: UIWindow
+    private var childCoordinators = [Coordinator]()
+    private var hasSeenOnboarding = CurrentValueSubject<Bool, Never>(false)
+    private var subscriptions = Set<AnyCancellable>()
     
     init(window: UIWindow) {
         self.window = window
@@ -22,15 +22,15 @@ class AppCoordinator: Coordinator {
     func start() {
         hasSeenOnboarding.sink { [weak self] hasSeen in
             guard let self = self else { return }
-            let coordinator = createCoordinator(for: hasSeen)
+            let coordinator = createChildCoordinator(for: hasSeen)
             coordinator.start()
             self.childCoordinators = [coordinator]
             self.window.rootViewController = coordinator.getRootViewController()
         }.store(in: &subscriptions)
     }
     
-    private func createCoordinator(for hasSeenOnboarding: Bool) -> Coordinator {
-        if hasSeenOnboarding {
+    private func createChildCoordinator(for condtion: Bool) -> Coordinator {
+        if condtion {
             return MainCoordinator()
         } else {
             return OnboardingCoordinator(self.hasSeenOnboarding)
