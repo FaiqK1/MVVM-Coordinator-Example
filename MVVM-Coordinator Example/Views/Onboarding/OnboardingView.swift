@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    var action: () -> ()
+    var skipAction: () -> ()
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -45,7 +45,7 @@ struct OnboardingView: View {
     
     @ViewBuilder func skipButtonView() -> some View {
         Button {
-            action()
+            skipAction()
         } label: {
             Text("Skip")
                 .foregroundStyle(.black)

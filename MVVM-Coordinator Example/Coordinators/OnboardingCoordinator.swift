@@ -17,8 +17,8 @@ class OnboardingCoordinator: Coordinator {
     }
     
     func start() {
-        let onboardingView = OnboardingView {
-            
+        let onboardingView = OnboardingView { [weak self] in
+            self?.hasSeenOnboarding.send(true)
         }
         rootViewController = UIHostingController(rootView: onboardingView)
     }
