@@ -18,15 +18,17 @@ class MainCoordinator: Coordinator {
     
     func start() {
         let firstTabCoordinator = MainFirstTabCoordinator()
+        firstTabCoordinator.start()
         childCoordinators.append(firstTabCoordinator)
-        let firstViewController = firstTabCoordinator.firstViewController
+        let firstViewController = firstTabCoordinator.rootViewController
         firstViewController.tabBarItem = UITabBarItem(title: "First",
                                                       image: UIImage(systemName: "house"),
                                                       selectedImage: UIImage(systemName: "house.fill"))
         
         let secondTabCoordinator = MainSecondTabCoordinator()
+        secondTabCoordinator.start()
         childCoordinators.append(secondTabCoordinator)
-        let secondViewController = secondTabCoordinator.secondViewController
+        let secondViewController = secondTabCoordinator.rootViewController
         secondViewController.tabBarItem = UITabBarItem(title: "Second",
                                                        image: UIImage(systemName: "paperplane"),
                                                        selectedImage: UIImage(systemName: "paperplane.fill"))
