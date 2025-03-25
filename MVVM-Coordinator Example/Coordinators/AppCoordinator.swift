@@ -18,6 +18,7 @@ class AppCoordinator: Coordinator {
     
     init(window: UIWindow) {
         self.window = window
+        setupGlobalNavigationAppearance()
         determineHasSeenOnboarding()
     }
     
@@ -55,5 +56,17 @@ class AppCoordinator: Coordinator {
             return
         }
         UserDefaults.standard.setValue(true, forKey: hasSeenOnboardingKey)
+    }
+    
+    private func setupGlobalNavigationAppearance() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .white
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+        
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        UINavigationBar.appearance().compactAppearance = appearance
+        UINavigationBar.appearance().tintColor = .black
     }
 }

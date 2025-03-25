@@ -23,6 +23,7 @@
 		A83956B32D8D1CE300FE9C38 /* MainFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83956B22D8D1CE300FE9C38 /* MainFirstViewController.swift */; };
 		A83956B62D8D206900FE9C38 /* MainSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83956B42D8D206900FE9C38 /* MainSecondViewController.swift */; };
 		A83956B72D8D206900FE9C38 /* MainSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A83956B52D8D206900FE9C38 /* MainSecondViewController.xib */; };
+		A8943B4C2D907A550073B461 /* MainFirstTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8943B4B2D907A550073B461 /* MainFirstTabViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		A83956B22D8D1CE300FE9C38 /* MainFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFirstViewController.swift; sourceTree = "<group>"; };
 		A83956B42D8D206900FE9C38 /* MainSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSecondViewController.swift; sourceTree = "<group>"; };
 		A83956B52D8D206900FE9C38 /* MainSecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainSecondViewController.xib; sourceTree = "<group>"; };
+		A8943B4B2D907A550073B461 /* MainFirstTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFirstTabViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				A83956B22D8D1CE300FE9C38 /* MainFirstViewController.swift */,
+				A8943B4B2D907A550073B461 /* MainFirstTabViewModel.swift */,
 				A83956AC2D8D1B5300FE9C38 /* MainFirstDetailView.swift */,
 			);
 			path = FirstTab;
@@ -238,6 +241,7 @@
 				A83956852D8CFB1E00FE9C38 /* ViewController.swift in Sources */,
 				A83956B32D8D1CE300FE9C38 /* MainFirstViewController.swift in Sources */,
 				A83956A42D8D199F00FE9C38 /* MainFirstTabCoordinator.swift in Sources */,
+				A8943B4C2D907A550073B461 /* MainFirstTabViewModel.swift in Sources */,
 				A83956B62D8D206900FE9C38 /* MainSecondViewController.swift in Sources */,
 				A83956A62D8D19A800FE9C38 /* MainSecondTabCoordinator.swift in Sources */,
 				A83956982D8D0B5000FE9C38 /* AppCoordinator.swift in Sources */,
